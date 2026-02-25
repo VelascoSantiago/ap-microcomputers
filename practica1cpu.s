@@ -1,6 +1,30 @@
 /* =====================================================================
+ * ACTIVIDAD 3: Programa de 10 instrucciones
+ * ===================================================================== */
+
+.text
+.global _start
+
+_start:
+    @ --- Inicio de las 10 instrucciones ---
+    mov r1, #20          @ 1. Cargar 20 en R1 (R1 = 20)
+    mov r2, #4           @ 2. Cargar 4 en R2 (R2 = 4)
+    add r3, r1, r2       @ 3. Suma: R3 = 20 + 4 = 24
+    sub r4, r1, r2       @ 4. Resta: R4 = 20 - 4 = 16
+    mul r5, r1, r2       @ 5. Multiplicación: R5 = 20 * 4 = 80
+    and r6, r1, r2       @ 6. AND lógico: 20 (10100) & 4 (00100) = 4
+    orr r7, r1, r2       @ 7. OR lógico: 20 (10100) | 4 (00100) = 20
+    lsr r8, r1, #2       @ 8. Desplazamiento derecha: 20 >> 2 = 5
+    lsl r9, r2, #3       @ 9. Desplazamiento izquierda: 4 << 3 = 32
+    mov r0, r3           @ 10. Mover valor de R3 a R0 (R0 = 24)
+    @ --- Fin de las 10 instrucciones ---
+
+    @ Salida (Solo para Raspberry Pi / Linux / CPUlator)
+    mov r7, #1
+    svc 0
+
+/* =====================================================================
  * ACTIVIDAD 4: Promedio de dos números de 8 bits
- * (Copia desde aquí hasta la siguiente actividad para simular)
  * ===================================================================== */
 .text
 .global _start
@@ -24,7 +48,6 @@ _start:
 
 /* =====================================================================
  * ACTIVIDAD 5: Comentar código de ejemplo (Contador ping-pong)
- * (Copia desde aquí hasta la siguiente actividad para simular)
  * ===================================================================== */
 .text
 .global _start
@@ -48,7 +71,6 @@ loop2:
 
 /* =====================================================================
  * ACTIVIDAD 6: Corrimiento de bit a la izquierda
- * (Copia desde aquí hasta la siguiente actividad para simular)
  * ===================================================================== */
 .text
 .global _start
@@ -65,7 +87,6 @@ loop_shift:
 
 /* =====================================================================
  * ACTIVIDAD 7: Suma de 32 bits con acarreo
- * (Copia desde aquí hasta la siguiente actividad para simular)
  * ===================================================================== */
 .text
 .global _start
@@ -94,7 +115,6 @@ _start:
 
 /* =====================================================================
  * ACTIVIDAD 8: Suma de 64 bits con acarreo
- * (Copia desde aquí hasta la siguiente actividad para simular)
  * ===================================================================== */
 .text
 .global _start
@@ -130,7 +150,6 @@ _start:
 
 /* =====================================================================
  * ACTIVIDAD 9: Factorial de 8 bits
- * (Copia desde aquí hasta la siguiente actividad para simular)
  * ===================================================================== */
 .text
 .global _start
@@ -162,7 +181,6 @@ fin_factorial:
 
 /* =====================================================================
  * ACTIVIDAD 10: Ciclo For (j = 0; i <= 50; i++) { j = j + 2; }
- * (Copia desde aquí hasta el final del archivo para simular)
  * ===================================================================== */
 .text
 .global _start

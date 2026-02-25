@@ -1,4 +1,30 @@
 /*
+ * Actividad 3: Programa de 10 instrucciones
+ * Objetivo: Ejecutar 10 operaciones distintas y reportar resultados.
+ */
+
+.text
+.global main
+
+main:
+    @ --- Inicio de las 10 instrucciones ---
+    mov r1, #20          @ 1. Cargar 20 en R1 (R1 = 20)
+    mov r2, #4           @ 2. Cargar 4 en R2 (R2 = 4)
+    add r3, r1, r2       @ 3. Suma: R3 = 20 + 4 = 24
+    sub r4, r1, r2       @ 4. Resta: R4 = 20 - 4 = 16
+    mul r5, r1, r2       @ 5. Multiplicación: R5 = 20 * 4 = 80
+    and r6, r1, r2       @ 6. AND lógico: 20 (10100) & 4 (00100) = 4
+    orr r7, r1, r2       @ 7. OR lógico: 20 (10100) | 4 (00100) = 20
+    lsr r8, r1, #2       @ 8. Desplazamiento derecha: 20 >> 2 = 5
+    lsl r9, r2, #3       @ 9. Desplazamiento izquierda: 4 << 3 = 32
+    mov r0, r3           @ 10. Mover valor de R3 a R0 (R0 = 24)
+    @ --- Fin de las 10 instrucciones ---
+
+    @ Salida (Solo para Raspberry Pi / Linux)
+    mov r7, #1
+    svc 0
+
+/*
  * Actividad 4: Promedio de dos números de 8 bits
  * Basado en el código de ejemplo de la Actividad 1
  * Fórmula: Promedio = (DATO1 + DATO2) / 2
