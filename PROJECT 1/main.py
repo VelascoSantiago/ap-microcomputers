@@ -4,7 +4,6 @@ import time
 # -------------------------
 # Configuración LEDs (Actualizado a GP6-GP13)
 # -------------------------
-# Esto crea la lista usando los pines físicos donde conectaste tus LEDs
 leds = [Pin(i, Pin.OUT) for i in range(6, 14)]
 
 # -------------------------
