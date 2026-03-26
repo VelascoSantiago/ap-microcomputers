@@ -99,17 +99,17 @@ def main():
     lcd_init()
     cargar_chars()
 
-    # Fase 1: Mostrar información del equipo [cite: 3]
-    mensaje = "Equipo 10 - Diego, Gael, Santiago, Charchi"
+    # Mostrar información del equipo [cite: 3]
+    mensaje = "Equipo 10 - Gael, Diego, Santiago, Axel"
     desplazar_nombre(mensaje)
     
-    # Fase 2: Pausa de dos segundos después de mostrar la info 
+    # Pausa de dos segundos después de mostrar la info 
     lcd_clear()
     cursor(0, 3)
     escribir("EQUIPO 10")
-    utime.sleep(2) # <--- Los 2 segundos obligatorios del PDF
+    utime.sleep(2)
     
-    # Fase 3: Animación CGRAM continua a la derecha 
+    # Animación CGRAM continua a la derecha 
     lcd_clear()
     cursor(0, 0)
     escribir("Animacion CGRAM")
