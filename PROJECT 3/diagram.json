@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "author": "Santiago Velasco",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": -66.3,
+      "left": -441.85,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg",
+      "top": -109.38,
+      "left": -181.28,
+      "attrs": { "digits": "4", "common": "cathode" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnStart",
+      "top": 265.4,
+      "left": -192,
+      "attrs": { "label": "Start/Pause" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btnReset",
+      "top": 332.6,
+      "left": -220.8,
+      "attrs": { "label": "Reset" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP2", "sevseg:A", "green", [ "v67.2", "h-207.6", "v-233.55", "h562.8" ] ],
+    [ "pico:GP3", "sevseg:B", "green", [ "v86.4", "h-246", "v-300.75", "h630" ] ],
+    [ "pico:GP4", "sevseg:C", "red", [ "v163.2", "h355.2" ] ],
+    [ "pico:GP5", "sevseg:D", "red", [ "v86.4", "h326.4" ] ],
+    [ "pico:GP6", "sevseg:E", "red", [ "v105.6", "h297.59" ] ],
+    [ "pico:GP7", "sevseg:F", "green", [ "v192", "h-217.2", "v-425.55", "h524.4" ] ],
+    [ "pico:GP8", "sevseg:G", "red", [ "v201.6", "h316.8" ] ],
+    [ "pico:GP9", "sevseg:DP", "red", [ "v134.4", "h288" ] ],
+    [ "pico:GP14", "btnStart:1.l", "red", [ "h0" ] ],
+    [ "pico:GND.5", "btnStart:2.r", "black", [ "h62.4", "v121.45" ] ],
+    [ "pico:GP15", "btnReset:1.l", "red", [ "v28.8", "h86.4" ] ],
+    [ "pico:GND.7", "btnReset:2.r", "black", [ "h81.6", "v284.65" ] ],
+    [ "pico:GP18", "sevseg:DIG1", "blue", [ "v-126", "h220.79" ] ],
+    [ "pico:GP21", "sevseg:DIG4", "blue", [ "v0" ] ],
+    [ "sevseg:DIG2", "pico:GP19", "blue", [ "v28.8", "h-259.2" ] ],
+    [ "pico:GP20", "sevseg:DIG3", "blue", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
